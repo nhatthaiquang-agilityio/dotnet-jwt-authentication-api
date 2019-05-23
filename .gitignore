@@ -1,0 +1,8 @@
+# volumes mongo db
+devops/data/
+
+obj/
+bin/
+
+.vs
+.DS_Store
