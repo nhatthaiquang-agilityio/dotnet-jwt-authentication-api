@@ -5,13 +5,14 @@ ASP NET Core API + MongoDB: JWT Authentication
 + Using Jwt Token for Getting All Users
 
 ### Requirements
++ Docker Compose
 + ASP NET Core 2.1
 + MongoDB
 + Jwt Authentication Token
 
 ### Issues
 + 'HS256' requires the SecurityKey.KeySize to be greater than '128' bits
-Fixed: Increase the length of secret in appsettings
+    - Fixed: Increase the length of secret in appsettings
 
 
 ### Usage
