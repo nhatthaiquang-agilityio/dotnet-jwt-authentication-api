@@ -16,9 +16,4 @@
     <PackageReference Include="MongoDB.Driver" Version="2.8.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Controllers\IActionResult.cs" />
-    <Compile Remove="Services\IMongoCollection.cs" />
-    <Compile Remove="Dtos\UserDto.cs" />
-  </ItemGroup>
 </Project>
