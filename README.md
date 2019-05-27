@@ -27,7 +27,7 @@ docker-compose up
 ### Demo
 + Create user
 ```
-http://localhost:5000/api/users/register
+POST http://localhost:5000/api/users/register
 
 Body:
 {
@@ -50,7 +50,7 @@ Response:
 
 + Authenticate User and Generate JWT Token
 ```
-http://localhost:5000/api/users/authenticate
+POST http://localhost:5000/api/users/authenticate
 Body:
 {
     "username": "nhatthai",
@@ -70,7 +70,7 @@ Response:
 
 + Get all users
 ```
-http://localhost:5000/api/users
+GET http://localhost:5000/api/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjVjZTY2ZWQwMzhhMmE1MDVlMmI0ZGFkOCIsIm5iZiI6MTU1ODYwNjU0NCwiZXhwIjoxNTU5MjExMzQ0LCJpYXQiOjE1NTg2MDY1NDR9.8BIW5ITdy-BC_8jbcQ-nAL3pTZ65-XMxmcIH4VN7m8s
 
 Response:
