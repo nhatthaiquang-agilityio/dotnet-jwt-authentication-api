@@ -15,7 +15,7 @@ namespace WebApi.Services
 {
     public class UserService : IUserService
     {
-        private readonly IMongoCollection<User> _users;
+        private readonly MongoDB.Driver.IMongoCollection<User> _users;
         private readonly AppSettings _appSettings;
 
         public UserService(IOptions<AppSettings> appSettings)
