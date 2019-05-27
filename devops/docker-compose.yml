@@ -8,6 +8,16 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: example
     volumes:
       - ./data:/data/db
-    #   - volumes/data/:/data/db
     ports:
       - 27017:27017
+
+  webapi:
+    container_name: webapi
+    build:
+      context: ../jwt-authentication-api
+    ports:
+      - "5000:80"
+    environment:
+      CONTAINER: container
+    depends_on:
+      - mongo
