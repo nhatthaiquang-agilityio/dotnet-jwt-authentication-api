@@ -16,13 +16,11 @@ ASP NET Core API + MongoDB: JWT Authentication
 
 
 ### Usage
-+ Start MongoDB
++ Start MongoDB and WebAPI
 ```
 cd devops
 docker-compose up
 ```
-
-+ Start Web API in Visual Studio
 
 ### Demo
 + Create user
