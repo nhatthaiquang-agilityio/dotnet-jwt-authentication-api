@@ -4,12 +4,13 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 COPY WebApi.sln .
 COPY WebApi/WebApi.csproj ./src/
-RUN dotnet restore
+COPY WebApi.sln ./src/
+RUN dotnet restore ./src/WebApi.csproj
 
 # copy everything else and build app
 COPY WebApi/. ./src/
 WORKDIR /app/src
-RUN dotnet publish -c Release -o out
+RUN dotnet publish WebApi.csproj -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app

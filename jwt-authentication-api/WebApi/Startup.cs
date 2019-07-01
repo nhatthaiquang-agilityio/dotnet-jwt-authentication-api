@@ -31,23 +31,12 @@ namespace WebApi
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
-            var container = Environment.GetEnvironmentVariable("CONTAINER");
+            // var container = Environment.GetEnvironmentVariable("CONTAINER");
             services.Configure<AppSettings>(options =>
             {
                 options.Secret =
                     Configuration.GetSection("AppSettings:Secret").Value;
-
-                if(container == "container")
-                {
-                    options.ConnectionString =
-                        Configuration.GetSection("MongoDB:Container").Value;
-                }
-                else
-                {
-                    options.ConnectionString =
-                        Configuration.GetSection("MongoDB:ConnectionString").Value;
-                }
-
+                options.ConnectionString = Configuration["ConnectionString"];
                 options.Database =
                     Configuration.GetSection("MongoDB:Database").Value;
             });

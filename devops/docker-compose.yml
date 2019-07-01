@@ -18,6 +18,6 @@ services:
     ports:
       - "5000:80"
     environment:
-      CONTAINER: container
+      ConnectionString: mongodb://root:example@mongo:27017
     depends_on:
       - mongo
