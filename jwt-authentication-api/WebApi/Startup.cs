@@ -31,7 +31,6 @@ namespace WebApi
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
-            // var container = Environment.GetEnvironmentVariable("CONTAINER");
             services.Configure<AppSettings>(options =>
             {
                 options.Secret =
